@@ -20,8 +20,12 @@ O que esse toolkit permite fazer
 
 Você consegue:
 
+```text
+
 ✔ monitorar portas abertas
 ✔ ver processos conectados
 ✔ descobrir dispositivos na rede
 ✔ analisar tabela ARP
 ✔ detectar atividades suspeitas
+
+````
