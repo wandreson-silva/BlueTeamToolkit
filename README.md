@@ -5,23 +5,17 @@
 
 ```text
 Desktop
-└── BlueTeamToolkitPro
-    ├── monitor_rede.ps1
-    ├── scanner_rede.ps1
-    ├── detector_portscan.ps1
-    ├── detector_arp.ps1
-    ├── mapa_ips.ps1
-    ├── processos_rede.ps1
-    ├── executar_toolkit.bat
-    └── logs
+ └ BlueTeamToolkit
+      ├ monitor_portas.ps1
+      ├ scanner_rede.ps1
+      ├ detector_arp_spoof.ps1
+      ├ processos_rede.ps1
+      ├ executar_toolkit.bat
+      └ logs
 ```
 
-O que esse toolkit permite fazer
-
-Você consegue:
-
+# O que esse toolkit permite fazer
 ```text
-
 ✔ monitorar portas abertas
 ✔ ver processos conectados
 ✔ descobrir dispositivos na rede
