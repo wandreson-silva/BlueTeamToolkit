@@ -1,20 +1,19 @@
-Get-NetTCPConnection | ForEach-Object {
+Get-NetTCPConnection -ErrorAction SilentlyContinue | ForEach-Object {
+    $processName = "N/A"
+    try {
+        # O '-ErrorAction Stop' força o comando a ir para o Catch caso o PID tenha sumido da memória
+        $p = Get-Process -Id $_.OwningProcess -ErrorAction Stop
+        $processName = $p.ProcessName
+    }
+    catch {
+        $processName = "Desconhecido/Encerrado"
+    }
 
-try{
-$p = Get-Process -Id $_.OwningProcess
-}
-catch{
-$p = "N/A"
-}
-
-[PSCustomObject]@{
-
-Processo=$p.ProcessName
-PID=$_.OwningProcess
-LocalPort=$_.LocalPort
-RemoteIP=$_.RemoteAddress
-Estado=$_.State
-
-}
-
-} | Format-Table
+    [PSCustomObject]@{
+        Processo   = $processName
+        PID        = $_.OwningProcess
+        PortaLocal = $_.LocalPort
+        IPRemoto   = $_.RemoteAddress
+        Estado     = $_.State
+    }
+} | Format-Table -Autosize
