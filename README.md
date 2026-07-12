@@ -23,5 +23,6 @@ Desktop
 ✔ detectar atividades suspeitas
 
 ````
-# O que esse toolkit permite fazer
+# Tela Blue Team Toolkit
+
 ![Principais Comandos Linux](./Blue_Team_Toolkit.png)
